@@ -1,60 +1,21 @@
-let today = alert ("Today is Wednesday");
-comsole.log('now');
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
 
+const number1 = parseFloat(prompt('Enter first number: '));
+const number2 = parseFloat(prompt('Enter second number: '));
 
-def calculate():
+let result;
 
-    number_1 = int(input('Please enter the first number: '))
+if (operator == '+') {
+    result = number1 + number2;
+}
+else if (operator == '-') {
+    result = number1 - number2;
+}
+else if (operator == '*') {
+    result = number1 * number2;
+}
+else {
+    result = number1 / number2;
+}
 
-    
-    operation = input('''
-Please type in the math operation you would like to complete:
-+ for addition
-- for subtraction
-/ for division
-* for multiplication
-% for modulo
-''')
-
-    number_2 = int(input('Please enter the second number: '))
-
-    if operation == '+':
-        print('{} + {} = '.format(number_1, number_2))
-        print(number_1 + number_2)
-
-    elif operation == '-':
-        print('{} - {} = '.format(number_1, number_2))
-        print(number_1 - number_2)
-
-    elif operation == '/':
-        print('{} / {} = '.format(number_1, number_2))
-        print(number_1 / number_2)
-
-    elif operation == '*':
-        print('{} * {} = '.format(number_1, number_2))
-        print(number_1 * number_2)
-
-    elif operation == '%':
-        print('{} % {} = '.format(number_1, number_2))
-        print(number_1 % number_2)
-
-    else:
-        print('You have not typed a valid operator, please run the program again.')
-
-    # Add again() function to calculate() function
-    again()
-
-def again():
-    calc_again = input('''
-Do you want to calculate again?
-Please type Y for YES or N for NO.
-''')
-
-    if calc_again.upper() == 'Y':
-        calculate()
-    elif calc_again.upper() == 'N':
-        print('See you later.')
-    else:
-        again()
-
-calculate()
+console.log(`${number1} ${operator} ${number2} = ${result}`);
